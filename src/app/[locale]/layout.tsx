@@ -3,12 +3,15 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/partials/Header'
 import Footer from '@/components/partials/Footer'
 import { Analytics } from '@vercel/analytics/react'
+import Container from '@mui/material/Container'
+import Toolbar from '@mui/material/Toolbar'
+import Box from '@mui/material/Box'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Opal',
-  description: 'Opal',
+  title: '3D-Theorie',
+  description: '3D-Theorie',
 }
 
 type Props = {
@@ -20,11 +23,28 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <div className='w-full mx-auto relative min-h-screen'>
+        <Container
+          maxWidth={false}
+          disableGutters
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100dvh',
+            maxWidth: 1920,
+            padding: 0,
+            position: 'relative',
+            // bgcolor: 'black',
+          }}
+        >
           <Header />
-          <main className='grow'>{children}</main>
+          {/* <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <Toolbar />
+          </Box> */}
+          <Box component='main' sx={{ flexGrow: 1, px: 2, pt: 1, pb: 4 }}>
+            {children}
+          </Box>
           <Footer />
-        </div>
+        </Container>
         <Analytics />
       </body>
     </html>
