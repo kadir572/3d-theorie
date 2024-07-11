@@ -1,5 +1,5 @@
 'use client'
-import { Inter, Lato, Roboto } from 'next/font/google'
+import { Inter, Lato, Roboto, Alegreya } from 'next/font/google'
 import { PaletteColorOptions, createTheme } from '@mui/material/styles'
 
 declare module '@mui/material/styles' {
@@ -7,6 +7,12 @@ declare module '@mui/material/styles' {
     theorieBlue?: PaletteColorOptions
   }
 }
+
+const alegreya = Alegreya({
+  weight: ['400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -38,7 +44,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: inter.style.fontFamily,
+    fontFamily: roboto.style.fontFamily,
     h4: {
       fontWeight: 500,
       [baseTheme.breakpoints.down('md')]: {

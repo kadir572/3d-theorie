@@ -12,7 +12,7 @@ export default function MobileMenuButton() {
       aria-label='open drawer'
       edge='start'
       onClick={() => toggleMenu(true)}
-      sx={{ mr: 2, display: { md: 'none' }, color: 'black' }}
+      sx={{ display: { md: 'none' }, color: 'black' }}
     >
       <MenuIcon fontSize='large' />
     </IconButton>

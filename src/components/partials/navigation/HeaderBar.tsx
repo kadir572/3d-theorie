@@ -7,21 +7,20 @@ import Typography from '@mui/material/Typography'
 import MobileMenuButton from '@/components/buttons/MobileMenuButton'
 import Link from '@mui/material/Link'
 import NextLink from 'next/link'
+import Box from '@mui/material/Box'
+import { navLinks } from '@/lib/links/navigation'
 
 export default function HeaderBar() {
   return (
     <AppBar
       position='fixed'
       sx={{
-        // zIndex: theme => theme.zIndex.drawer + 1,
         maxWidth: 1920,
         left: 0,
         right: 0,
-        mx: 'auto',
-        backgroundColor: {
-          xs: 'rgba(255, 255, 255, 1)',
-          md: 'rgba(255, 255, 255, 0.8)',
-        },
+        px: 3,
+        pt: 2,
+        backgroundColor: 'transparent',
         boxShadow: 'none',
       }}
     >
@@ -29,7 +28,8 @@ export default function HeaderBar() {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          // backgroundColor: 'transparent',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          borderRadius: 2,
         }}
       >
         <Link component={NextLink} href='/' sx={{ textDecoration: 'none' }}>
@@ -38,6 +38,26 @@ export default function HeaderBar() {
           </Typography>
         </Link>
         <MobileMenuButton />
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            alignItems: 'center',
+            gap: 2,
+          }}
+        >
+          {navLinks.map((el, index) => (
+            <Link
+              component={NextLink}
+              href={el.href}
+              key={index}
+              sx={{ textDecoration: 'none', color: 'black' }}
+            >
+              <Typography variant='h5' component='span'>
+                {el.label}
+              </Typography>
+            </Link>
+          ))}
+        </Box>
       </Toolbar>
     </AppBar>
   )

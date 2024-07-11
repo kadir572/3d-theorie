@@ -10,8 +10,8 @@ import Box from '@mui/material/Box'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Opal',
-  description: 'Opal',
+  title: '3D-Theorie',
+  description: '3D-Theorie',
 }
 
 type Props = {
@@ -37,8 +37,12 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
           }}
         >
           <Header />
-          <Toolbar />
-          <Box sx={{ flexGrow: 1, px: 2, py: 1 }}>{children}</Box>
+          {/* <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <Toolbar />
+          </Box> */}
+          <Box component='main' sx={{ flexGrow: 1, px: 2, pt: 1, pb: 4 }}>
+            {children}
+          </Box>
           <Footer />
         </Container>
         <Analytics />
