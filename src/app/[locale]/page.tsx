@@ -10,7 +10,7 @@ export default function Home() {
       <Box
         sx={{
           position: 'relative',
-          height: { xs: 'calc(100vh - 112px)', md: 'calc(100vh - 80px)' },
+          height: { xs: 'calc(100vh - 128px)', md: 'calc(100vh - 80px)' },
           borderRadius: 2,
           overflow: 'hidden',
         }}
