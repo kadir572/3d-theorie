@@ -1,8 +1,5 @@
 import AppBar from '@mui/material/AppBar'
-import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
-import MenuIcon from '@mui/icons-material/Menu'
-import { useMobileMenuStore } from '@/lib/store/zustand'
 import Typography from '@mui/material/Typography'
 import MobileMenuButton from '@/components/buttons/MobileMenuButton'
 import Link from '@mui/material/Link'
@@ -42,7 +39,7 @@ export default function HeaderBar() {
           sx={{
             display: { xs: 'none', md: 'flex' },
             alignItems: 'center',
-            gap: 2,
+            gap: 4,
           }}
         >
           {navLinks.map((el, index) => (

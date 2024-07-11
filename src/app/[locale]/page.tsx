@@ -10,7 +10,7 @@ export default function Home() {
       <Box
         sx={{
           position: 'relative',
-          height: 'calc(100vh - 80px)',
+          height: { xs: 'calc(100vh - 112px)', md: 'calc(100vh - 80px)' },
           borderRadius: 2,
           overflow: 'hidden',
         }}
@@ -82,7 +82,9 @@ export default function Home() {
         </Box>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <Typography>Prüfung ohne Stress, dann scroll weiter</Typography>
+        <Typography fontWeight='600'>
+          Prüfung ohne Stress, dann scroll weiter
+        </Typography>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <KeyboardArrowDownIcon />
