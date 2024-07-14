@@ -12,7 +12,7 @@ export default function CloseMenuButton() {
       aria-label='open drawer'
       edge='start'
       onClick={() => toggleMenu(false)}
-      sx={{ mr: 2, display: { md: 'none' } }}
+      sx={{ display: { md: 'none' }, p: 1 }}
     >
       <CloseIcon fontSize='large' />
     </IconButton>

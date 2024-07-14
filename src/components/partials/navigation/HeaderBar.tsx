@@ -5,18 +5,21 @@ import MobileMenuButton from '@/components/buttons/MobileMenuButton'
 import Link from '@mui/material/Link'
 import NextLink from 'next/link'
 import Box from '@mui/material/Box'
+import CircleIcon from '@mui/icons-material/Circle'
 import { navLinks } from '@/lib/links/navigation'
+import DesktopLinks from './links/DesktopLinks'
 
 export default function HeaderBar() {
   return (
     <AppBar
-      position='fixed'
+      position='absolute'
       sx={{
         maxWidth: 1920,
         left: 0,
         right: 0,
-        px: 3,
-        pt: 2,
+        mx: 'auto',
+        px: { xs: 0, md: 2 },
+        pt: { xs: 1, md: 3 },
         backgroundColor: 'transparent',
         boxShadow: 'none',
       }}
@@ -25,7 +28,7 @@ export default function HeaderBar() {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          backgroundColor: { md: 'rgba(255, 255, 255, 0.8)' },
           borderRadius: 2,
         }}
       >
@@ -35,26 +38,7 @@ export default function HeaderBar() {
           </Typography>
         </Link>
         <MobileMenuButton />
-        <Box
-          sx={{
-            display: { xs: 'none', md: 'flex' },
-            alignItems: 'center',
-            gap: 4,
-          }}
-        >
-          {navLinks.map((el, index) => (
-            <Link
-              component={NextLink}
-              href={el.href}
-              key={index}
-              sx={{ textDecoration: 'none', color: 'black' }}
-            >
-              <Typography variant='h5' component='span'>
-                {el.label}
-              </Typography>
-            </Link>
-          ))}
-        </Box>
+        <DesktopLinks />
       </Toolbar>
     </AppBar>
   )
