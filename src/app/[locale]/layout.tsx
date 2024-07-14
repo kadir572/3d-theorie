@@ -40,7 +40,14 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
           {/* <Box sx={{ display: { xs: 'block', md: 'none' } }}>
             <Toolbar />
           </Box> */}
-          <Box component='main' sx={{ flexGrow: 1, px: 2, pt: 1, pb: 4 }}>
+          <Box
+            component='main'
+            sx={{
+              flexGrow: 1,
+              px: 0,
+              pb: 12,
+            }}
+          >
             {children}
           </Box>
           <Footer />
