@@ -138,7 +138,7 @@ export default function MobileMenu() {
       open={isOpen}
       onClose={() => toggleMenu(false)}
     >
-      <DialogContent>
+      <DialogContent sx={{ p: 0, pt: 1 }}>
         <Toolbar
           sx={{
             display: 'flex',
