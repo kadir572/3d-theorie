@@ -91,7 +91,15 @@ export default function Footer() {
           </Typography>
           <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
             <Typography fontWeight={300}>Ein Product von</Typography>
-            <Typography fontWeight={600}>&nbsp;Blyze Zürich</Typography>
+            <Link
+              component={NextLink}
+              href={'https://blyze.ch'}
+              color='inherit'
+              sx={{ textDecoration: 'none' }}
+              target='_blank'
+            >
+              <Typography fontWeight={600}>&nbsp;Blyze Zürich</Typography>
+            </Link>
           </Box>
         </Box>
       </Box>
