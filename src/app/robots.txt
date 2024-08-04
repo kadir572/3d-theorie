@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theorie.blyze.ch/sitemap.xml
