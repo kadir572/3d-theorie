@@ -2,6 +2,28 @@
 import { Inter, Lato, Roboto, Alegreya } from 'next/font/google'
 import { PaletteColorOptions, createTheme } from '@mui/material/styles'
 
+import localFont from 'next/font/local'
+
+const ppTelegraph = localFont({
+  src: [
+    {
+      path: './assets/fonts/PPTelegraf-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './assets/fonts/PPTelegraf-Ultrabold.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './assets/fonts/PPTelegraf-Ultralight.otf',
+      weight: '300',
+      style: 'normal',
+    },
+  ],
+})
+
 declare module '@mui/material/styles' {
   interface PaletteOptions {
     theorieBlue?: PaletteColorOptions
@@ -44,7 +66,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: ppTelegraph.style.fontFamily,
     h4: {
       fontWeight: 500,
       [baseTheme.breakpoints.down('md')]: {

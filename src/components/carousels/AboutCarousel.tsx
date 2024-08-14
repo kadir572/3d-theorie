@@ -1,6 +1,9 @@
 'use client'
 
 import LightbulbIcon from '@mui/icons-material/Lightbulb'
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance'
+import CodeIcon from '@mui/icons-material/Code'
+import CampaignIcon from '@mui/icons-material/Campaign'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
@@ -18,31 +21,22 @@ const slides: { title: string; icon: JSX.Element; description: string[] }[] = [
     ],
   },
   {
-    title: 'Vorentwicklung',
-    icon: <LightbulbIcon sx={{ height: '100%', fontSize: 150 }} />,
+    title: 'Finanzierung',
+    icon: <AccountBalanceIcon sx={{ height: '100%', fontSize: 150 }} />,
+    description: ['Sponsoren und Investoren suchen'],
+  },
+  {
+    title: 'Entwicklung',
+    icon: <CodeIcon sx={{ height: '100%', fontSize: 150 }} />,
     description: [
-      'Prototyp-Entwicklung',
-      'Benutzeroberfläche kreieren',
-      'Benutzerfeedback einholen',
+      'Finalisierung des Spiels',
+      'Zusätzliche Meilensteine erreichen',
     ],
   },
   {
-    title: 'Vorentwicklung',
-    icon: <LightbulbIcon sx={{ height: '100%', fontSize: 150 }} />,
-    description: [
-      'Prototyp-Entwicklung',
-      'Benutzeroberfläche kreieren',
-      'Benutzerfeedback einholen',
-    ],
-  },
-  {
-    title: 'Vorentwicklung',
-    icon: <LightbulbIcon sx={{ height: '100%', fontSize: 150 }} />,
-    description: [
-      'Prototyp-Entwicklung',
-      'Benutzeroberfläche kreieren',
-      'Benutzerfeedback einholen',
-    ],
+    title: 'Marketing',
+    icon: <CampaignIcon sx={{ height: '100%', fontSize: 150 }} />,
+    description: ['Markteinführung', 'ADS starten'],
   },
 ]
 
